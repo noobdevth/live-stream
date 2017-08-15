@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components'
 
+import Timer from './components/timer'
 import Menubar from './components/menubar'
-import GithubCard from './components/github-card'
-import TwitterCard from './components/twitter-card'
+
+import TwitterSection from './sections/twitter'
+import GithubSection from './sections/github'
 
 const SectionContainer = styled.div`
     width: 100%;
@@ -30,31 +32,16 @@ class App extends React.Component {
         return (
             <div>
                 <Menubar />
+                <Timer end={1502885093}/>
                 <SectionContainer>
                     <Containter>
                         <Padding>
-                            <TwitterCard />
-                            <TwitterCard />
-                            <TwitterCard />
-                            <TwitterCard />
-                            <TwitterCard />
-                            <TwitterCard />
+                            <TwitterSection />
                         </Padding>
                     </Containter>
                     <Containter github>
                         <Padding>
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
-                            <GithubCard />
+                            <GithubSection />
                         </Padding>
                     </Containter>
                 </SectionContainer>
